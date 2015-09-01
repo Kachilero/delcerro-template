@@ -82,7 +82,7 @@ module.exports = function (grunt) {
           '<%= bower_conf.directory %>/typeahead.js/dist/typeahead.bundle.js',
           '<%= bower_conf.directory %>/select2/select2.js',
           '<%= bower_conf.directory %>/datatables/media/js/jquery.dataTables.js',
-          '<%= bower_conf.directory %>/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js',
+          '<%= bower_conf.directory %>/datatables-plugins-bootstrap3/js/datatables-plugins-bootstrap3.js',
           '<%= bower_conf.directory %>/jquery-timepicker-jt/jquery.timepicker.js',
 
           'js/*.js',
@@ -90,7 +90,33 @@ module.exports = function (grunt) {
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
-    } //end concat
+    }, //end concat
+
+    ugligy: {
+      options: {
+        preserveComments: 'some'
+      },
+      dist: {
+        src: '<%= concat.dist.dest %>',
+        dest: 'dist/js/<%= pkg.name %>.min.js'
+      }
+    }, //end ugligy
+
+    sass: {
+      dev: {
+        options: {
+          style: 'expanded',
+          banner: '<%= banner %>'
+        },
+        files: {
+          'dist/css/<%= pkg.name %>.css': 'scss/<%= pkg.name %>.scss'
+        }
+      }
+    } // end Sass
+
+    // TODO:
+    // pick up at line 135: autoprefixer
+    // which will actually be postcss
 
   }) // end initConfig
 } // end module.exports
