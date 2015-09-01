@@ -1,5 +1,5 @@
 {
-  "name": "delcerro-Template",
+  "name": "delcerro-template",
   "description": "A static website template using Bootstrap-SASS"
   "main": [
     "scss/delcerro-Template",
