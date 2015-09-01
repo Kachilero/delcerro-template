@@ -1,6 +1,6 @@
 {
   "name": "delcerro-template",
-  "description": "A static website template using Bootstrap-SASS"
+  "description": "A static website template using Bootstrap-SASS",
   "main": [
     "scss/delcerro-Template",
     "js/app.js"
@@ -31,6 +31,7 @@
     "video.js": "~4.12.15"
   },
   "resolutions": {
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "datatables": "master"
   }
 }
