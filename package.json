@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "author": "Alejandro Cerro",
+  "homepage": "http://www.alejandrocerro.com",
   "repository": {
     "type": "git",
     "url": "git@github.com:Kachilero/delcerro-template.git",
